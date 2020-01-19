@@ -1,4 +1,4 @@
-package com.pemila.aries.config;
+package com.pemila.aries.web.demo.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
@@ -21,11 +21,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
 				// `/` 及`/home`路径被设置为不需要身份认证
-					.antMatchers("/","/home").permitAll().anyRequest().authenticated()
+				.antMatchers("/","/home").permitAll().anyRequest().authenticated()
 				.and()
-					.formLogin().loginPage("/login").permitAll()
+				// 配置登录页面
+				.formLogin().loginPage("/login").permitAll()
 				.and()
-					.logout().permitAll();
+				.logout().permitAll();
 	}
 
 	@Autowired

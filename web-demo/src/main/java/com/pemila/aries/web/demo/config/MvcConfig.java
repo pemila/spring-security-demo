@@ -1,4 +1,4 @@
-package com.pemila.aries.config;
+package com.pemila.aries.web.demo.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;

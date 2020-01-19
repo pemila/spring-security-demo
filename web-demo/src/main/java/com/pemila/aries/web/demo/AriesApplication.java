@@ -1,4 +1,4 @@
-package com.pemila.aries;
+package com.pemila.aries.web.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
