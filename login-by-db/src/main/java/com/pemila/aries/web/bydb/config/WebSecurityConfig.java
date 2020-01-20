@@ -1,11 +1,14 @@
 package com.pemila.aries.web.bydb.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.password.NoOpPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 /**
  * @author pemila
@@ -24,6 +27,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 
+		/*
+		 * 使用hasRole来定义资源需要拥有的角色时，配置项会在hasRole方法的参数上添加前缀ROLE_,
+		 * 因此在自定义的userDetailService设定用户角色时需要给该用户已有的角色前添加ROLE_前缀，
+		 */
+
 		http.authorizeRequests()
 				// 不需要权限即可访问
 				.antMatchers("/").permitAll()
@@ -41,5 +49,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		auth.userDetailsService(userDetailsService);
+	}
+
+	@Bean
+	public static PasswordEncoder passwordEncoder() {
+		return NoOpPasswordEncoder.getInstance();
 	}
 }

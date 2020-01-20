@@ -1,7 +1,7 @@
 package com.pemila.aries.web.bydb.service.impl;
 
 import com.pemila.aries.web.bydb.dao.UserDao;
-import com.pemila.aries.web.bydb.entity.User;
+import com.pemila.aries.web.bydb.entity.UserEntity;
 import com.pemila.aries.web.bydb.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,16 +20,16 @@ public class UserServiceImpl implements UserService {
 	private final UserDao userDao;
 
 	@Override
-	public void insertUser(User user) {
-		if(userDao.existsUserByUserName(user.getUserName())){
+	public void insertUser(UserEntity userEntity) {
+		if(userDao.existsUserByUsername(userEntity.getUsername())){
 			throw new RuntimeException("用户名已存在");
 		}
-		userDao.save(user);
+		userDao.save(userEntity);
 	}
 
 	@Override
-	public User getUserByUserName(String userName) {
-		return userDao.findByUserName(userName);
+	public UserEntity getUserByUsername(String username) {
+		return userDao.findByUsername(username);
 	}
 
 }

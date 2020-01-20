@@ -11,13 +11,13 @@ import javax.persistence.*;
 @Data
 @Entity
 @Table(name = "user")
-public class User {
+public class UserEntity {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private Integer id;
 	/** 账号*/
-	private String userName;
+	private String username;
 	/** 密码*/
 	private String password;
 	/** 昵称*/

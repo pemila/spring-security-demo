@@ -1,6 +1,6 @@
 package com.pemila.aries.web.bydb.service;
 
-import com.pemila.aries.web.bydb.entity.User;
+import com.pemila.aries.web.bydb.entity.UserEntity;
 
 /**
  * @author zhangchao
@@ -8,7 +8,7 @@ import com.pemila.aries.web.bydb.entity.User;
  **/
 public interface UserService {
 
-	void insertUser(User user);
+	void insertUser(UserEntity userEntity);
 
-	User getUserByUserName(String userName);
+	UserEntity getUserByUsername(String username);
 }
