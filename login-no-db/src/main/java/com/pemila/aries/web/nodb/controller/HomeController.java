@@ -1,4 +1,4 @@
-package com.pemila.aries.web.demo.controller;
+package com.pemila.aries.web.nodb.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

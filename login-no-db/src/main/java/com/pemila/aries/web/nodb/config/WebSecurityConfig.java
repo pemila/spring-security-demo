@@ -1,4 +1,4 @@
-package com.pemila.aries.web.demo.config;
+package com.pemila.aries.web.nodb.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

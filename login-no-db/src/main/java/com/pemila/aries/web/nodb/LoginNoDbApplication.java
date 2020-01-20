@@ -1,4 +1,4 @@
-package com.pemila.aries.web.demo;
+package com.pemila.aries.web.nodb;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

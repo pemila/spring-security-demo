@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>aries.demo</artifactId>
+    <artifactId>login-no-db</artifactId>
 
 
 </project>
