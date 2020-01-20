@@ -22,6 +22,7 @@
     <modules>
         <module>login-no-db</module>
         <module>login-by-db</module>
+        <module>login-by-db-encrypt</module>
     </modules>
 
     <dependencies>

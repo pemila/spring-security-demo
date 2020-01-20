@@ -9,8 +9,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>login-by-db</artifactId>
-    <description>spring security demo : 账号密码存储在数据库</description>
+    <artifactId>login-by-db-encrypt</artifactId>
+
+    <description>spring security demo : 账号密码存储在数据库，并对密码加密</description>
 
     <dependencies>
         <dependency>
@@ -22,7 +23,6 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.18</version>
         </dependency>
-
     </dependencies>
 
 </project>

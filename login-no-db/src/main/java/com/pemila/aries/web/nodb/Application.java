@@ -10,10 +10,10 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
  **/
 @EnableWebMvc
 @SpringBootApplication
-public class LoginNoDbApplication {
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(LoginNoDbApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 
 }
